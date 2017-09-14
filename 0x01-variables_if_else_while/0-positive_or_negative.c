@@ -3,11 +3,11 @@
 #include <stdio.h>
 
 /**
- * main - Outputs to stderr
+ * main - Outputs pos,negative,or zero
  *
  * Description: this function uses fprintf
- * to print to certain output, stderr
- * Return: 1
+ * to print the value of a rand number
+ * Return: 0
  */
 int main(void)
 {
