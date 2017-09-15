@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - prints all 2 number combinations
+ * main - prints all 2 2 number combinations
  *
  * Description: this function uses putchar
- * to print the all 00 number combination
+ * to print the all 00 00 number combination
  * Return: 0
  */
 int main(void)
