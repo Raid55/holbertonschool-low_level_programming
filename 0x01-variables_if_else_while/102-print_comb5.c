@@ -32,7 +32,7 @@ int main(void)
 					putchar(d + '0');
 					if (a == 9 && b == 8 && c == 9 && d == 9)
 					{
-						a = 10, b = 9, c = 9, d = 9;
+						a = 10, b = 10, c = 10, d = 10;
 						continue;
 					}
 					putchar(',');
