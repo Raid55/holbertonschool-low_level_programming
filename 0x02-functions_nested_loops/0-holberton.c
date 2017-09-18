@@ -1,5 +1,5 @@
-#include "_putchar.c"
 
+int _putchar(char); 
 /**
  * main - prints holberton
  *
