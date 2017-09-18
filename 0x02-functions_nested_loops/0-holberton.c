@@ -1,12 +1,13 @@
-
-int _putchar(char); 
+int _putchar(char);
 /**
  * main - prints holberton
  *
- * Description: does things
- * Returns: 0
+ * Description: does things that are cool
+ * and yea
+ * Return: 0
  */
-int main(void){
+int main(void)
+{
 	_putchar('H');
 	_putchar('o');
 	_putchar('l');

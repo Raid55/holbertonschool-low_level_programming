@@ -3,7 +3,8 @@
  * main - does what main does
  *
  * Description: ayyoo
- * Returns: 0
+ * cool description yo
+ * Return: 0
  */
 void print_alphabet(void)
 {
