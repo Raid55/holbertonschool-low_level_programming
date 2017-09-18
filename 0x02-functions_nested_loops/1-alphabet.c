@@ -1,10 +1,11 @@
 #include "holberton.h"
+
 /**
- * main - does what main does
+ * print_alphabet - prints alpha
  *
- * Description: ayyoo
- * cool description yo
- * Return: 0
+ * Description: does things that are cool
+ * and also prints alphabet btw...
+ * Return: void
  */
 void print_alphabet(void)
 {

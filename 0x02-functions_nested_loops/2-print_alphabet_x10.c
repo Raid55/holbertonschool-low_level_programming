@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * main - does what main does
+ * print_alphabet_x10 - prints alpha 10x
  *
- * Description: ayyoo
- * Returns: 0
+ * Description: This prints the alphabet 10x
+ * Return: void
  */
 void print_alphabet_x10(void)
 {
