@@ -2,6 +2,7 @@
 
 /**
  * print_times_table - prints times tables from n
+ * @n: number to limit times tables to
  *
  * Description: returns times table to n
  * in a cool way
