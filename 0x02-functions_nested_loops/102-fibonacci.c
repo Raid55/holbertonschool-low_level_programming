@@ -13,10 +13,10 @@ int main(void)
 	int i = 0;
 
 	printf("%ld, %ld, ", fib, fib2);
-	while (i <= 46)
+	while (i <= 47)
 	{
 		fib3 = fib + fib2;
-		if (i == 46)
+		if (i == 47)
 			printf("%ld\n", fib3);
 		else
 			printf("%ld, ", fib3);
