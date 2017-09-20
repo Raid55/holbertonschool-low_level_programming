@@ -9,17 +9,17 @@
  */
 int main(void)
 {
-	long fib = 1, fib2 = 2, fib3 = 0;
+	unsigned long fib = 1, fib2 = 2, fib3 = 0;
 	int i = 2;
 
-	printf("%ld, %ld, ", fib, fib2);
-	while (i < 49)
+	printf("%lu, %lu, ", fib, fib2);
+	while (i < 48)
 	{
 		fib3 = fib + fib2;
-		if (i == 48)
-			printf("%ld\n", fib3);
+		if (i == 47)
+			printf("%lu\n", fib3);
 		else
-			printf("%ld, ", fib3);
+			printf("%lu, ", fib3);
 		fib = fib2;
 		fib2 = fib3;
 		i++;
