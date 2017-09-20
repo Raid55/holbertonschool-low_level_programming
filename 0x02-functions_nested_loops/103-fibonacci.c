@@ -10,7 +10,7 @@
 int main(void)
 {
 	long fib = 1, fib2 = 2, fib3 = 0;
-	long sum = 0;
+	long sum = 2;
 
 	while (fib3 <= 4000000)
 	{
