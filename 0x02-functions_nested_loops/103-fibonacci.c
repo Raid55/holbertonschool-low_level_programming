@@ -12,9 +12,11 @@ int main(void)
 	long fib = 1, fib2 = 2, fib3 = 0;
 	long sum = 0;
 
-	while (fib <= 4000000)
+	while (fib3 <= 4000000)
 	{
 		fib3 = fib + fib2;
+		if (fib3 > 4000000)
+			continue;
 		fib = fib2;
 		fib2 = fib3;
 		if (fib3 % 2 == 0)
