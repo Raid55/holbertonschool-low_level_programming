@@ -10,13 +10,13 @@
 int main(void)
 {
 	unsigned long fib = 1, fib2 = 2, fib3 = 0;
-	int i = 2;
+	int i = 0;
 
 	printf("%lu, %lu, ", fib, fib2);
-	while (i < 48)
+	while (i < 47)
 	{
 		fib3 = fib + fib2;
-		if (i == 47)
+		if (i == 46)
 			printf("%lu\n", fib3);
 		else
 			printf("%lu, ", fib3);
