@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_diagonal - prints i number of diagonal line 
+ * print_diagonal - prints i number of diagonal line
  * @i: number of lines to print
  *
  * Description: prints diagonal depending on i
@@ -10,7 +10,7 @@
 void print_diagonal(int i)
 {
 	int s = 0, j;
-	
+
 	while (i > 0)
 	{
 		for (j = 0; j <= s; j++)
@@ -25,6 +25,6 @@ void print_diagonal(int i)
 		i--;
 		s++;
 	}
-	if (i <= 0)	
+	if (i <= 0)
 		_putchar('\n');
 }
