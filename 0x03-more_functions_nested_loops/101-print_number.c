@@ -10,25 +10,17 @@
 void print_number(int n)
 {
 	int digit, rev;
-	char o = '0'; /*drys(dont repeat yourself)*/
 	
 	if (n < 0)
 		_putchar('-'), n = n * -1;
 	if(n < 10)
 	{
-		_putchar(n + o);
+		_putchar(n + '0');
 	}
 	else if (n < 100)
 	{
-		_putchar((n / 10) + o);
-		_putchar((n % 10) + o);
-	}
-	else if (n < 1000)
-	{
-		digit = n / 10;
-		_putchar((digit / 10) + o);
-		_putchar((digit % 10) + 0);
-		_putchar((n % 10) + o);
+		_putchar((n / 10) + '0');
+		_putchar((n % 10) + '0');
 	}
 	else
 	{
@@ -40,7 +32,7 @@ void print_number(int n)
 		while (rev > 0)
 		{
 			digit = rev % 10;
-			_putchar(digit + o);
+			_putchar(digit + '0');
 			rev /= 10;
 		}
 	}
