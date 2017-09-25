@@ -2,7 +2,8 @@
 
 /**
  * swap_int - takes address and changes value
- * @n: address to be changed
+ * @a: int a to be swapped
+ * @b: int b to be swapped
  *
  * Return: void
  */

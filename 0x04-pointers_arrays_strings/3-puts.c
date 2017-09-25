@@ -2,7 +2,7 @@
 
 /**
  * _puts - puts string
- * @n: string to b put
+ * @str: string to b put
  *
  * Return: void
  */

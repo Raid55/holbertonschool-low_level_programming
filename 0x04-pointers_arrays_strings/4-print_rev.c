@@ -2,7 +2,7 @@
 
 /**
  * print_rev - puts string in rev
- * @n: string to b put in rev
+ * @s: string to b put in rev
  *
  * Return: void
  */

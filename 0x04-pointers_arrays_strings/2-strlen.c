@@ -2,7 +2,7 @@
 
 /**
  * _strlen - returns lenth of string (array)
- * @n: string(arr) to be messured
+ * @s: string(arr) to be messured
  *
  * Return: length of arr
  */
