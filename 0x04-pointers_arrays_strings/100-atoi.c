@@ -58,11 +58,13 @@ int _atoi(char *s)
 		j++, i++;
 	while (s[l] >= '0' && s[l] <= '9')
 	{
-		total += (_pow(10, j - 1)) * (s[l] - '0');
+		total += (_pow(10, j - 1)) * (j == 1 ? (s[l] - 1) - '0' : s[l] - '0');
 		j--, l++;
 	}
 	if (sign == '-')
-		total = total * -1;
+		total = total * -1, total--;
+	else
+		total++;
 	return (total);
 
 }
