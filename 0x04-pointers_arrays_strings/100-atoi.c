@@ -5,8 +5,7 @@
  * @l: left number ^
  * @r: ^ right
  *
- *
- * return: l ^ r
+ * Return: l ^(to the power of) r
  */
 int _pow(int l, int r)
 {
@@ -33,7 +32,7 @@ int _atoi(char *s)
 	int i = 0, j = 0, l = 0; /*Disposable incrementors*/
 	char sign = '\0'; /*always plus or minus depending on string*/
 	int total = 0; /*Total output*/
-	int isThereANum = 0;
+	int isThereANum = 0; /*is there a num? true or false*/
 
 	while (s[i] != '\0')
 	{
