@@ -2,7 +2,7 @@
 
 /**
  * _strlen - returns string len
- * @str :  string to b messured
+ * @str : string to b messured
  *
  * Return: str length
  */
@@ -16,7 +16,7 @@ int _strlen(char *str)
 	return (i);
 }
 /**
- * _strcat - appends src string to dest
+ * _strncpy - appends src string to dest
  * @src: source file
  * @dest: destination file
  * @n: number of bytes to copy
