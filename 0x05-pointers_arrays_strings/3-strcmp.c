@@ -16,27 +16,26 @@ int _strlen(char *str)
 	return (i);
 }
 /**
- * _strcat - appends src string to dest
- * @src: source file
- * @dest: destination file
+ * _strcmp - appends src string to dest
+ * @s1: check for copy
+ * @s2: check for copy
  *
- * Return: dest pointer
+ * Return: int depending on if copy or not
  */
-char *_strcat(char *dest, char *src)
+int _strcmp(char *s1, char *s2)
 {
-	int destC, srC;
+	int s1C;
 	int i = 0;
+	int res = 0;
 
-	destC = _strlen(dest);
-	srC = _strlen(src);
+	s1C = _strlen(s1);
 
-	while (i <= srC)
+	while (s1C > 0)
 	{
-		dest[destC] = src[i];
-		destC++, i++;
+		if (s1[i] == s2[i])
+			res = 0, i++, s1C--;
+		else
+			return (s1[i] > s2[i] ? s1[i] - s2[i] + 0 : (s1[i] - s2[i]) * 1);
 	}
-
-	dest[destC] = '\0';
-
-	return (dest);
+	return (res);
 }
