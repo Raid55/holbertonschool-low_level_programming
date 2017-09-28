@@ -1,42 +1,23 @@
 #include "holberton.h"
-
 /**
- * _strlen - returns string len
- * @str :  string to b messured
+ * reverse_array - reverses int array
+ * @a: array to reverse
+ * @n: n of bytes
  *
- * Return: str length
+ * Return: void
  */
-int _strlen(char *str)
+void reverse_array(int *a, int n)
 {
 	int i = 0;
+	int tmp;
 
-	while (str[i] != '\0')
-		i++;
+	n = n - 1;
 
-	return (i);
-}
-/**
- * _strcat - appends src string to dest
- * @src: source file
- * @dest: destination file
- *
- * Return: dest pointer
- */
-char *_strcat(char *dest, char *src)
-{
-	int destC, srC;
-	int i = 0;
-
-	destC = _strlen(dest);
-	srC = _strlen(src);
-
-	while (i <= srC)
+	while (i < n)
 	{
-		dest[destC] = src[i];
-		destC++, i++;
+		tmp = a[i];
+		a[i] = a[n];
+		a[n] = tmp;
+		i++, n--;
 	}
-
-	dest[destC] = '\0';
-
-	return (dest);
 }

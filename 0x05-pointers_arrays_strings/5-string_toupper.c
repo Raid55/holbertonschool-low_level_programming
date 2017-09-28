@@ -1,42 +1,20 @@
 #include "holberton.h"
-
 /**
- * _strlen - returns string len
- * @str :  string to b messured
+ * string_toupper - capitalizes on capitalizme...
+ * @s: source string
  *
- * Return: str length
+ * Return: pointer to string
  */
-int _strlen(char *str)
+char *string_toupper(char *s)
 {
 	int i = 0;
 
-	while (str[i] != '\0')
-		i++;
-
-	return (i);
-}
-/**
- * _strcat - appends src string to dest
- * @src: source file
- * @dest: destination file
- *
- * Return: dest pointer
- */
-char *_strcat(char *dest, char *src)
-{
-	int destC, srC;
-	int i = 0;
-
-	destC = _strlen(dest);
-	srC = _strlen(src);
-
-	while (i <= srC)
+	while (s[i] != '\0')
 	{
-		dest[destC] = src[i];
-		destC++, i++;
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
+		i++;
 	}
 
-	dest[destC] = '\0';
-
-	return (dest);
+	return (s);
 }
