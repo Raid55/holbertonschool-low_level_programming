@@ -8,8 +8,16 @@
 char *rot13(char *s)
 {
 	int i = 0, j = 0;
-	char *template = "anANboBOcpCPdqDQerERfsFSgtGThuHUivIVjwJWkxKXlyLYmzMZ"
-		"naNAobOBpcPCqdQDreREsfSFtgTGuhUHviVIwjWJxkXKylYLzmZM";
+	char template[] = {'a', 'n', 'A', 'N', 'b', 'o', 'B', 'O', 'c', 'p', 'C',
+		'P', 'd', 'q', 'D', 'Q', 'e', 'r', 'E', 'R', 'f', 's', 'F', 'S', 'g',
+		't', 'G', 'T', 'h', 'u', 'H', 'U', 'i', 'v', 'I', 'V', 'j', 'w', 'J',
+		'W', 'k', 'x', 'K', 'X', 'l', 'y', 'L', 'Y', 'm', 'z', 'M', 'Z', 'n',
+		'a', 'N', 'A', 'o', 'b', 'O', 'B', 'p', 'c', 'P', 'C', 'q', 'd', 'Q',
+		'D', 'r', 'e', 'R', 'E', 's', 'f', 'S', 'F', 't', 'g', 'T', 'G', 'u',
+		'h', 'U', 'H', 'v', 'i', 'V', 'I', 'w', 'j', 'W', 'J', 'x', 'k', 'X',
+		'K', 'y', 'l', 'Y', 'L', 'z', 'm', 'Z', 'M'};
+	/* char *template = "anANboBOcpCPdqDQerERfsFSgtGThuHUivIVjwJWkxKXlyLYmzMZ\ */
+/* naNAobOBpcPCqdQDreREsfSFtgTGuhUHviVIwjWJxkXKylYLzmZM"; */
 
 	while (s[i] != '\0')
 	{
