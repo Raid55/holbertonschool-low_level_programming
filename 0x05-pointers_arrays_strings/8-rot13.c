@@ -1,42 +1,31 @@
 #include "holberton.h"
-
 /**
- * _strlen - returns string len
- * @str :  string to b messured
+ * rot13 - convert to rot13
+ * @s: source string
  *
- * Return: str length
+ * Return: char pointer
  */
-int _strlen(char *str)
+char *rot13(char *s)
 {
-	int i = 0;
+	int i = 0, j = 0;
+	char *template = "anANboBOcpCPdqDQerERfsFSgtGThuHUivIVjwJWkxKXlyLYmzMZ"
+		"naNAobOBpcPCqdQDreREsfSFtgTGuhUHviVIwjWJxkXKylYLzmZM";
 
-	while (str[i] != '\0')
-		i++;
-
-	return (i);
-}
-/**
- * _strcat - appends src string to dest
- * @src: source file
- * @dest: destination file
- *
- * Return: dest pointer
- */
-char *_strcat(char *dest, char *src)
-{
-	int destC, srC;
-	int i = 0;
-
-	destC = _strlen(dest);
-	srC = _strlen(src);
-
-	while (i <= srC)
+	while (s[i] != '\0')
 	{
-		dest[destC] = src[i];
-		destC++, i++;
+		while (template[j] != '\0')
+		{
+			if (s[i] == template[j])
+			{
+				s[i] = template[j + 1];
+				break;
+			}
+			j++, j++;
+		}
+		j = 0;
+		i++;
 	}
 
-	dest[destC] = '\0';
 
-	return (dest);
+	return (s);
 }
