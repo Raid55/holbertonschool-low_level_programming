@@ -28,7 +28,7 @@ char *_strstr(char *haystack, char *needle)
 			else
 				break;
 			if (needle[j] == '\0')
-				flag = 1;	
+				flag = 1;
 		}
 		printf("I: %d\nflag: %d\n", I, flag);
 		if (flag)
