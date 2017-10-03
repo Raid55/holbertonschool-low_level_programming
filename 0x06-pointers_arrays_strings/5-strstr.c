@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * _strstr - checks haystack for needle
  * @haystack: haystack to search
@@ -11,7 +12,7 @@ char *_strstr(char *haystack, char *needle)
 	int j = 0;
 	int needleLen = 0;
 	int I = 0, i = 0;
-	int flag = 1;
+	int flag = 0;
 
 	while (needle[needleLen] != '\0')
 		needleLen++;
@@ -22,16 +23,14 @@ char *_strstr(char *haystack, char *needle)
 		i = I;
 		while (needle[j] != '\0')
 		{
-			if (haystack[i] == needle[j])
+			if (haystack[i] != '\0' && haystack[i] == needle[j])
 				i++, j++;
 			else
 				break;
-			if (j == needleLen - 1)
-			{
-				flag = 0;
-				break;
-			}
+			if (needle[j] == '\0')
+				flag = 1;	
 		}
+		printf("I: %d\nflag: %d\n", I, flag);
 		if (flag)
 			break;
 		I++;
@@ -42,5 +41,6 @@ char *_strstr(char *haystack, char *needle)
 			I--;
 			haystack++;
 		}
-	return (I ? ++haystack : 0);
+	printf("I: %d\nflag: %d\n", I, flag);
+	return (flag ? --haystack : 0);
 }
