@@ -33,7 +33,7 @@ char *_strchr(char *s, char c)
  */
 char *_strpbrk(char *s, char *accept)
 {
-	while (s)
+	while (*s)
 		if (_strchr(accept, *s++))
 			return (--s);
 	return (0);
