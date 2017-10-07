@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - adds and prints all args, only numbers
  * @argc: arg count
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 	}
 	while (argc > i)
 	{
-		if (atoi(argv[i]) != 0)
+		if (isdigit(*argv[i]))
 		{
 			sum += atoi(argv[i]), i++;
 		}
@@ -31,4 +32,5 @@ int main(int argc, char *argv[])
 
 	}
 	printf("%d\n", sum);
+	return (0);
 }
