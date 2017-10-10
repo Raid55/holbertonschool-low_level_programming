@@ -2,7 +2,20 @@
 #include <stdlib.h>
 #include <string.h>
 #include "holberton.h"
+/**
+ *  _strlen - returns lenth of string (array)
+ * @s: string(arr) to be messured
+ *
+ * Return: length of arr
+ */
+int _strlen(char *s)
+{
+	int i = 0;
 
+	while (s[i])
+		i++;
+	return (i);
+}
 /**
  * _strdup - duplictes string to a new location in mem
  * @str: string to copy to new allocation...lol
@@ -13,7 +26,7 @@ char *_strdup(char *str)
 {
 	unsigned int i = 0;
 	char *a;
-	unsigned int size = strlen(str);
+	unsigned int size = _strlen(str);
 
 	if (str == NULL)
 		return (NULL);
