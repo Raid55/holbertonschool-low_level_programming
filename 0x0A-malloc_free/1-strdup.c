@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "holberton.h"
 /**
  *  _strlen - returns lenth of string (array)
@@ -8,9 +7,9 @@
  *
  * Return: length of arr
  */
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
-	int i = 0;
+	unsigned int i = 0;
 
 	while (s[i])
 		i++;
@@ -26,12 +25,14 @@ char *_strdup(char *str)
 {
 	unsigned int i = 0;
 	char *a;
-	unsigned int size = _strlen(str);
+	unsigned int size;
 
 	if (str == NULL)
 		return (NULL);
-	a = (char *)malloc(sizeof(char) * size + 1);
 
+	size = _strlen(str);
+	a = (char *)malloc(sizeof(char) * size + 1);
+	
 	if (a == NULL)
 		return (NULL);
 	while (i < size)
