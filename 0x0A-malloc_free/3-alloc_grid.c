@@ -2,20 +2,6 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
- *  _strlen - returns lenth of string (array)
- * @s: string(arr) to be messured
- *
- * Return: length of arr
- */
-unsigned int _strlen(char *s)
-{
-	unsigned int i = 0;
-
-	while (s[i])
-		i++;
-	return (i);
-}
-/**
  * alloc_grid - allocate grid
  * @width: width of grid
  * @height: height of grid
@@ -34,9 +20,13 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	while (i < height)
 	{
-		a[i] = (int *)malloc(sizeof(int) * width);
-		if (a[i++] == NULL)
+		a[i++] = (int *)malloc(sizeof(int) * width);
+		if (a == NULL)
+		{
+			while (i >= 0)
+				free(a[--i]);
 			return (NULL);
+		}
 	}
 	i = 0;
 	while (i < height)
