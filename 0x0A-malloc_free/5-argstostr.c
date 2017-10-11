@@ -28,7 +28,9 @@ char *argstostr(int ac, char **av)
 	int i = 0, j = 0, l = 0;
 	char *a;
 
-	if (ac == 0 || av == NULL)
+	if (ac == 0)
+		return (NULL);
+	if (av == NULL)
 		return (NULL);
 	while (i < ac)
 		sizeSum += _strlen(av[i]), i++;
