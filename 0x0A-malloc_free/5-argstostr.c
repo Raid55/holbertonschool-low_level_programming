@@ -36,7 +36,8 @@ char *argstostr(int ac, char **av)
 	i = 0;
 
 	a = (char *)malloc(sizeof(char) * sizeSum + ac);
-
+	if (a == NULL)
+		return (NULL);
 	while (i < ac)
 	{
 		while (av[i][j] != '\0')
