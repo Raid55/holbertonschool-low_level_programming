@@ -1,7 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
  * _calloc - does what calloc does but not really since we arent init ing it
  * @nmemb: elements
