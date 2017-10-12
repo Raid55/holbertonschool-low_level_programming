@@ -29,12 +29,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *a;
 	unsigned int s1Len, s2Len;
 	unsigned int i, I;
-	char *emptyString = "";
 
 	if (s1 == NULL)
-		s1 = emptyString;
+		s1 = '\0';
 	if (s2 == NULL)
-		s2 = emptyString;
+		s2 = '\0';
 
 	s1Len = _strlen(s1);
 	s2Len = _strlen(s2);
