@@ -29,16 +29,23 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *a;
 	unsigned int s1Len, s2Len;
 	unsigned int i, I;
+	char nul = '\0';
+	int tots;
 
 	if (s1 == NULL)
-		s1 = '\0';
+		s1 = &nul;
 	if (s2 == NULL)
-		s2 = '\0';
+		s2 = &nul;
 
 	s1Len = _strlen(s1);
 	s2Len = _strlen(s2);
 
-	a = malloc((s1Len + 1) + n >= s2Len ? s2Len : n);
+	if (n >= s2Len)
+		tots = s2Len + s1Len;
+	else
+		tots = s1Len + n;
+
+	a = malloc(tots + 1);
 	if (a == NULL)
 		return (NULL);
 
