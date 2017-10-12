@@ -1,7 +1,21 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+/**
+ * _strlen - string len
+ * @s: string
+ *
+ * Return: int len
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+		i++;
+
+	return (i);
+}
 /**
  * string_nconcat - concatenates string s1 with nth of s2
  * @s1: string 1
@@ -22,10 +36,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = emptyString;
 
-	s1Len = strlen(s1);
-	s2Len = strlen(s2);
+	s1Len = _strlen(s1);
+	s2Len = _strlen(s2);
 
-	a = malloc(s1Len + 1 + n >= s2Len ? s2Len : n);
+	a = malloc((s1Len + 1) + n >= s2Len ? s2Len : n);
 	if (a == NULL)
 		return (NULL);
 
@@ -33,7 +47,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s1[i] != '\0')
 		a[I++] = s1[i++];
 	i = 0;
-	while (i < n)
+	while (s2[i] != '\0' && n-- != 0)
 		a[I++] = s2[i++];
 	a[I] = '\0';
 
