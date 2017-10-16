@@ -1,7 +1,7 @@
 #include "dog.h"
 #include <stdio.h>
 /**
- * print_god - prints doges all over the screen
+ * print_dog - prints doges all over the screen
  * @d: pointer to doge structure
  *
  * Return: void
