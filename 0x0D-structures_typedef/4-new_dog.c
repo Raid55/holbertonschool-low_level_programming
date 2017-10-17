@@ -12,11 +12,10 @@ int _strlen(char *s)
 
 	while (s[i])
 		i++;
-	return(i);
+	return (i);
 }
 /**
  * _strcpy - copy a string from on address to another
- * @dest: destination
  * @src: source to copy
  *
  * Return: pointer of dest
@@ -48,13 +47,13 @@ char *_strcpy(char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *doge;	
+	dog_t *doge;
 	char *N;
 	char *O;
 
 	doge = malloc(sizeof(dog_t));
 	if (doge == NULL)
-		return(NULL);
+		return (NULL);
 
 	N = _strcpy(name);
 	O = _strcpy(owner);
