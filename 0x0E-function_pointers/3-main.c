@@ -14,8 +14,7 @@ int main(int argc, char *argv[])
 	int (*final_operator)(int, int);
 	int num1;
 	int num2;
-	
-	
+
 	if (argc != 4)
 		printf("Error\n"), exit(98);
 
