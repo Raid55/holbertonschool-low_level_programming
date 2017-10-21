@@ -21,7 +21,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		testCase = va_arg(valist, char*);
 
-		printf("%s", testCase == NULL ? testCase : "(nil)");
+		printf("%s", testCase ? testCase : "(nil)");
 
 		if (i != n - 1 && separator != NULL)
 			printf("%s", separator);
