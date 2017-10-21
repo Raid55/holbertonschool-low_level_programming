@@ -15,14 +15,14 @@ void print_all(const char * const format, ...)
 
 	va_start(valist, format);
 
-	while (format[i] && format != NULL)
+	while (format[i])
 	{
 		switch (format[i])
 		{
 			case 'c':
 				printf("%c", va_arg(valist, int));
 				break;
-			case 'i': 
+			case 'i':
 				printf("%d", va_arg(valist, int));
 				break;
 			case 'f':
@@ -42,11 +42,9 @@ void print_all(const char * const format, ...)
 		}
 		if (format[i + 1])
 			printf(", ");
-		else 
-			printf("\n");
 		i++;
 	}
 	va_end(valist);
 	/*mandatory \n... i hate mandatory things...but hey..its mandatory!!!*/
-	return;
+	printf("\n");
 }
