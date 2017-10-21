@@ -43,6 +43,7 @@ void print_all(const char * const format, ...)
 			printf(", ");
 		i++;
 	}
+	va_end(valist);
 	/*mandatory \n... i hate mandatory things...but hey..its mandatory!!!*/
 	printf("\n");
 }
