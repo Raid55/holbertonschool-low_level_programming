@@ -11,35 +11,37 @@ void print_all(const char * const format, ...)
 {
 	va_list valist;
 	int i = 0;
-	int ac = 0;
+	char *stringTestCase;
 
 	va_start(valist, format);
-	while (format[i++] != '\0')
-		if (format[i - 1] == 'c' || format[i - 1] == 'i' ||
-			format[i - 1] == 'f' || format[i - 1] == 's')
-			ac++;
+
 	i = 0;
-	while (ac)
+	while (format[i])
 	{
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c", va_arg(valist, int)), ac--;
+				printf("%c", va_arg(valist, int));
 				break;
 			case 'i':
-				printf("%d", va_arg(valist, int)), ac--;
+				printf("%d", va_arg(valist, int));
 				break;
 			case 'f':
-				printf("%f", va_arg(valist, double)), ac--;
+				printf("%f", va_arg(valist, double));
 				break;
 			case 's':
-				printf("%s", va_arg(valist, char *)), ac--;
+				stringTestCase = va_arg(valist, char *);
+
+				if (!stringTestCase)
+					stringTestCase = "(nil)";
+
+				printf("%s", stringTestCase);
 				break;
 			default:
 				i++;
 				continue;
 		}
-		if (ac != 0)
+		if (format[i + 1])
 			printf(", ");
 		i++;
 	}
