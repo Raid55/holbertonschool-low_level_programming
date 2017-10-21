@@ -15,9 +15,9 @@ void print_all(const char * const format, ...)
 
 	va_start(valist, format);
 
-	while (format[i])
+	while (format[i] && format)
 	{
-		switch (format[i])
+		switch (format[i++])
 		{
 			case 'c':
 				printf("%c", va_arg(valist, int));
@@ -37,12 +37,10 @@ void print_all(const char * const format, ...)
 				printf("%s", stringTestCase);
 				break;
 			default:
-				i++;
 				continue;
 		}
-		if (format[i + 1])
+		if (format[i])
 			printf(", ");
-		i++;
 	}
 	va_end(valist);
 	/*mandatory \n... i hate mandatory things...but hey..its mandatory!!!*/
