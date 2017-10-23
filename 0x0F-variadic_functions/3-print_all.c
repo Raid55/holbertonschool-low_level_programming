@@ -42,7 +42,6 @@ void print_all(const char * const format, ...)
 		if (format[i])
 			printf(", ");
 	}
-	/*mandatory \n... i hate mandatory things...but hey..its mandatory!!!*/
 	printf("\n");
 	va_end(valist);
 }
