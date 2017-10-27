@@ -32,5 +32,5 @@ void free_list(list_t *head);
 
 /*adv prototypes*/
 void _startFunc(void)__attribute__((constructor));
- 
+
 #endif
