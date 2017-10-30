@@ -1,5 +1,10 @@
 #include "lists.h"
-
+/**
+ * pop_listint - pops first item of linked list
+ * @head: head of linked list
+ *
+ * Return: data number that was on linked list
+ */
 int pop_listint(listint_t **head)
 {
 	int tmpNum;
