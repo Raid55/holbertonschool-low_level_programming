@@ -5,7 +5,7 @@
  * @idx: pos to insert new node
  * @n: data to fill new node with
  *
- * Return: new node
+ * Return: new nod at pose
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
