@@ -14,10 +14,6 @@ void print_binary_helper(unsigned long int n)
 		else
 			n = n >> 1, print_binary_helper(n), _putchar('0');
 	}
-	else
-	{
-		return;
-	}
 }
 /**
  * print_binary - checks for 0 or sends of work to helper func
