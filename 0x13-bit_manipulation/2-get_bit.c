@@ -11,14 +11,14 @@ int get_bit(unsigned long int n, unsigned int index)
 	if (index > 32)
 		return (-1);
 
-	if (n <= 1) 
+	if (n <= 1)
 	{
 		if (!index)
 			return (n);
 		else
 			return (-1);
 	}
-    else
+	else
 	{
 		if (!index)
 			return (n % 2);
