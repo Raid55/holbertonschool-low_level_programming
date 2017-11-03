@@ -1,34 +1,6 @@
 #include "holberton.h"
 /**
- * get_bit_helper - helps the function with all of the logic
- * @n: number to extract bit from
- * @index: index pos to extract bit info
- *
- * Return: 1 or 0 depending one what byte or -1 on error
- */
-int get_bit_helper(unsigned long int n, unsigned int index)
-{
-	if (n != 0)
-	{
-		if (n & 1)
-		{
-			n = n >> 1;
-			if (index == 0)
-				return (1);
-			return (get_bit_helper(n, index - 1));
-		}
-		else
-		{
-			n = n >> 1;
-			if (index == 0)
-				return (0);
-			return (get_bit_helper(n, index - 1));
-		}
-	}
-	return (-1);
-}
-/**
- * get_bit - starts the get bit func, uses same logic as last ex
+ * get_bit - gets bit at index using shift
  * @n: num to analize for bit at index
  * @index: pos to extract bit
  *
@@ -36,11 +8,11 @@ int get_bit_helper(unsigned long int n, unsigned int index)
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (index > 64)
+	/*checks for size of long int * 4 for to check if index is realistic pos*/
+	if (index > sizeof(unsigned long int) * 4)
 		return (-1);
-
-	if (index == 0)
-		return (n & 1);
-	else
-		return (get_bit_helper(n, index));
+	/*number will evaluate to 1 or 0 after the shift and AND statment*/
+	/*by shifting it to the index we then use 1 and AND to extract*/
+	/*first bit out and return result*/
+	return ((n >> index) & 1);
 }
