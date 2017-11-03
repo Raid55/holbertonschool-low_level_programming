@@ -13,4 +13,11 @@ int set_bit(unsigned long int *n, unsigned int index);
 int clear_bit(unsigned long int *n, unsigned int index);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
+/*helper funcs*/
+void print_binary_helper(unsigned long int n);
+int get_bit_helper(unsigned long int n, unsigned int index);
+
+/*adv. prototypes*/
+int get_endianness(void);
+
 #endif
