@@ -36,10 +36,11 @@ int get_bit_helper(unsigned long int n, unsigned int index)
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (index > 32)
+	if (index > 64)
 		return (-1);
-	if (n == 0)
-		return (0);
+
+	if (index == 0)
+		return (n & 1);
 	else
 		return (get_bit_helper(n, index));
 }
