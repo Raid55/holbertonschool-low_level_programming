@@ -22,7 +22,8 @@ int main(int ac, char **av)
 	while (rErr != 0)
 	{
 		rErr = read(oFile, buff, 1024);
-		wErr = write(nFile, buff, rErr);
+		if (rErr != 0)
+			wErr = write(nFile, buff, rErr);
 		if (wErr == -1)
 			dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
