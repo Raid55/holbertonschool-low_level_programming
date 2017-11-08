@@ -1,5 +1,11 @@
 #include "holberton.h"
-
+/**
+ * main - does what cp does...man cp
+ * @ac: arg count
+ * @av: arg array
+ *
+ * Return: 0
+ */
 int main(int ac, char **av)
 {
 	int oFile;
@@ -12,14 +18,14 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 
 	oFile = open(av[1], O_RDONLY);
-	if (oFile == -1)	
+	if (oFile == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 
 	nFile = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (nFile == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit (99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 
-	while (rErr != 0) 
+	while (rErr != 0)
 	{
 		rErr = read(oFile, buff, 1024);
 		if (rErr == -1)
@@ -29,7 +35,7 @@ int main(int ac, char **av)
 		if (wErr == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
-	
+
 	err = close(oFile);
 	if (err == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", oFile), exit(100);
