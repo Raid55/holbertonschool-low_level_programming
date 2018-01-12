@@ -4,6 +4,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	hash_node_t *tmp;
 	unsigned long int keyInd;
+	
+	if (ht == NULL || key == NULL)
+		return (NULL);
 
 	keyInd = key_index((const unsigned char *)key, ht->size);
 
