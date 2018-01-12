@@ -1,3 +1,11 @@
+#include "hash_tables.h"
+
+/**
+ * hash_djb2 - http://www.cse.yorku.ca/~oz/hash.html
+ * @str: string to hash
+ * 
+ * Return: Hash int
+ */
 unsigned long int hash_djb2(const unsigned char *str)
 {
     unsigned long int hash;
