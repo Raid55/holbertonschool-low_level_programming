@@ -21,7 +21,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	keyInd = key_index((const unsigned char *)key, ht->size);
-	
+
 	tmp = ht->array[keyInd];
 	while (tmp)
 	{
@@ -30,7 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			tmp->value = (char *)value;
 			return (1);
 		}
-		tmp = tmp->next; 
+		tmp = tmp->next;
 	}
 
 	tmpNode = malloc(sizeof(hash_node_t));
