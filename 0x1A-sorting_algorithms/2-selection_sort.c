@@ -12,6 +12,9 @@ void selection_sort(int *array, size_t size)
 	size_t i = 0, j, k;
 	int tmp;
 
+	if (!array || size <= 1)
+		return;
+
 	while (i < size - 1)
 	{
 		k = i, j = i + 1;
