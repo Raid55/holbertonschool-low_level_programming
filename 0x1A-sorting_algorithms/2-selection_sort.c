@@ -24,13 +24,15 @@ void selection_sort(int *array, size_t size)
 				k = j;
 			j++;
 		}
-		/*Swaping action*/
-		tmp = array[k];
-		array[k] = array[i];
-		array[i] = tmp;
-
-		/*Print and Incr*/
-		print_array(array, size);
+		/*Swaping action and Print*/
+		if (k != i)
+		{
+			tmp = array[k];
+			array[k] = array[i];
+			array[i] = tmp;
+			print_array(array, size);
+		}
+		/*Incr*/
 		i++;
 	}
 }
