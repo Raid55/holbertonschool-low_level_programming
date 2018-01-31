@@ -27,5 +27,8 @@ void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 
 void behindSort(listint_t **list, listint_t *currNode);
+void quick_sort_helper(int *array, int start, int end, size_t size);
+int lomutos_partition(int *arr, int start, int end, size_t size);
+void swap(int *, int *);
 
 #endif
