@@ -7,7 +7,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *curr;
 
-	if (!(*list) || !list || !(*list)->next)
+	if (!list || !(*list) || !(*list)->next)
 		return;
 
 	curr = (*list);
