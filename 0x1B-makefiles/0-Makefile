@@ -1,0 +1,2 @@
+all:
+	gcc holberton.c m.h main.c -o holberton
