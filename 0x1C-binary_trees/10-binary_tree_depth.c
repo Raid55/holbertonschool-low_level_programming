@@ -3,6 +3,8 @@
 /**
  * binary_tree_depth - finds depth of tree from node
  * @node: node to run thru
+ *
+ * Return: depth of tree
  */
 size_t binary_tree_depth(const binary_tree_t *node)
 {

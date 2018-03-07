@@ -3,6 +3,8 @@
 /**
  * binary_tree_is_perfect - checks if tree is perfect
  * @tree: tree to run thru
+ *
+ * Return: 1 if perfect or 0 if not
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
@@ -20,6 +22,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 /**
  * binary_tree_is_full - checks if tree is full
  * @tree: tree to run
+ *
+ * Return: 1 if full or 0 if not
  */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
@@ -30,7 +34,7 @@ int binary_tree_is_full(const binary_tree_t *tree)
 
 	if (tree->left)
 		tmp = binary_tree_is_full(tree->left);
-	if (tree-> right)
+	if (tree->right)
 		tmp = binary_tree_is_full(tree->right);
 
 	if ((!tree->left && tree->right) || (tree->left && !tree->right))
@@ -41,6 +45,8 @@ int binary_tree_is_full(const binary_tree_t *tree)
 /**
  * binary_tree_size - finds size of full tree
  * @tree: head of tree to run thru
+ *
+ * Return: size of tree
  */
 size_t binary_tree_size(const binary_tree_t *tree)
 {

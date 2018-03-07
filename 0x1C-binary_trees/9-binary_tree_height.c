@@ -3,6 +3,8 @@
 /**
  * binary_tree_height - finds height of tree from node
  * @tree: head of tree to run thru
+ *
+ * Return: a high of tree
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
@@ -18,5 +20,5 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	if (!tree->left && !tree->right)
 		tmp_left--, tmp_right--;
 
-	return(tmp_left > tmp_right ? tmp_left + 1 : tmp_right + 1);
+	return (tmp_left > tmp_right ? tmp_left + 1 : tmp_right + 1);
 }
