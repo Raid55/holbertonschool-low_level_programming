@@ -1,12 +1,12 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_height - finds height of tree from node
+ * binary_tree_balance_helper - finds height of tree from node
  * @tree: head of tree to run thru
  *
  * Return: a high of tree
  */
-size_t binary_tree_height(const binary_tree_t *tree)
+size_t binary_tree_balance_helper(const binary_tree_t *tree)
 {
 	size_t tmp_left;
 	size_t tmp_right;
@@ -16,8 +16,8 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	if (!tree->left && !tree->right)
 		return (1);
 
-	tmp_left = binary_tree_height(tree->left);
-	tmp_right = binary_tree_height(tree->right);
+	tmp_left = binary_tree_balance_helper(tree->left);
+	tmp_right = binary_tree_balance_helper(tree->right);
 
 	if (!tree->left && !tree->right)
 		tmp_left--, tmp_right--;
@@ -39,14 +39,14 @@ int binary_tree_balance(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	tmp_l = binary_tree_height(tree->left);
-	tmp_r = binary_tree_height(tree->right);
+	tmp_l = binary_tree_balance_helper(tree->left);
+	tmp_r = binary_tree_balance_helper(tree->right);
 
 	/**
 	* printf(
 	*	"[%zu][%zu]\n",
-	*	binary_tree_height(tree->left),
-	*	binary_tree_height(tree->right));
+	*	binary_tree_balance_helper(tree->left),
+	*	binary_tree_balance_helper(tree->right));
 	*/
 	/**
 	* printf(
